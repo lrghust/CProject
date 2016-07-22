@@ -1,42 +1,42 @@
 #include"head.h"
 //信息初始化函数
-prov * init(void)
+Province * InitInfo(void)
 {
 	//初始化省份信息,要求每条信息顺序与结构成员顺序相同
 	FILE *pf = fopen("fprov.txt", "r+");
-	prov *phead = (prov *)malloc(sizeof(prov));
-	prov *tail = phead;
+	Province *phead = (Province *)malloc(sizeof(Province));
+	Province *tail = phead;
 	char temp[50];
 	while (fscanf(pf, "%s", temp) != EOF)
 	{
-		tail->next = (prov *)malloc(sizeof(prov));
+		tail->next = (Province *)malloc(sizeof(Province));
 		tail = tail->next;
-		strcpy(tail->p_prov, temp);
-		fscanf(pf, "%s%s", tail->p_man, tail->p_tel);
-		tail->p_cases = (cases *)malloc(sizeof(cases));
-		tail->p_cases->next = NULL;
+		strcpy(tail->ProvProv, temp);
+		fscanf(pf, "%s%s", tail->ProvLeader, tail->ProvTel);
+		tail->ProvCase = (Case *)malloc(sizeof(Case));
+		tail->ProvCase->next = NULL;
 	}
 	tail->next = NULL;
 	fclose(pf);
 	//初始化案件信息，要求每条信息顺序与结构成员顺序相同
 	tail = phead;
-	cases *tail1 = NULL;
+	Case *tail1 = NULL;
 	pf = fopen("fcases.txt", "r+");
 	while (fscanf(pf, "%s", temp) != EOF)
 	{
 		while (tail->next != NULL)
 		{
 			tail = tail->next;
-			if (!strcmp(temp, tail->p_prov))
+			if (!strcmp(temp, tail->ProvProv))
 			{
-				cases *tail1 = tail->p_cases;
+				Case *tail1 = tail->ProvCase;
 				while (tail1->next != NULL)tail1 = tail1->next;
-				tail1->next = (cases *)malloc(sizeof(cases));
+				tail1->next = (Case *)malloc(sizeof(Case));
 				tail1 = tail1->next;
-				strcpy(tail1->c_prov, temp);
-				fscanf(pf, "%s%s%s%c%c%c%d", tail1->c_id, tail1->c_date, tail1->c_name, &tail1->c_level, &tail1->c_charge, &tail1->c_money, &tail1->c_judge);
-				tail1->c_report = (report *)malloc(sizeof(report));
-				tail1->c_report->next = NULL;
+				strcpy(tail1->CaseProv, temp);
+				fscanf(pf, "%s%s%s%c%c%c%d", tail1->CaseId, tail1->CaseDate, tail1->CaseName, &tail1->CaseLevel, &tail1->CaseCharge, &tail1->CaseMoney, &tail1->CaseJudge);
+				tail1->CaseReport = (Report *)malloc(sizeof(Report));
+				tail1->CaseReport->next = NULL;
 				tail = phead;
 				break;
 			}
@@ -52,21 +52,21 @@ prov * init(void)
 		while (tail->next != NULL)
 		{
 			tail = tail->next;
-			tail1 = tail->p_cases;
+			tail1 = tail->ProvCase;
 			while (tail1->next != NULL)
 			{
 				tail1 = tail1->next;
-				if (!strcmp(tail1->c_id, temp))
+				if (!strcmp(tail1->CaseId, temp))
 				{
 					break;
 				}
 			}
-			report *tail2 = tail1->c_report;
+			Report *tail2 = tail1->CaseReport;
 			while (tail2->next != NULL)tail2 = tail2->next;
-			tail2->next = (report *)malloc(sizeof(report));
+			tail2->next = (Report *)malloc(sizeof(Report));
 			tail2 = tail2->next;
 			strcpy(tail2->r_id, temp);
-			fscanf(pf, "%s%s%s%c", tail2->r_date, tail2->r_firm, tail2->r_index, &tail2->r_field);
+			fscanf(pf, "%s%s%s%c", tail2->ReportDate, tail2->ReportFirm, tail2->ReportIndex, &tail2->ReportField);
 			tail2->next = NULL;
 			tail = phead;
 			break;

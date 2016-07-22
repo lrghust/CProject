@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	prov *head = init();
+	prov *head = InitInfo();
 	return 0;
 }
 

@@ -1,16 +1,16 @@
 #include"head.h"
 //信息修改函数：
 //省份信息修改函数
-void ch_prov(prov *head)
+void ChangeProvInfo(Province *head)
 {
-	prov *tail=head;
+	Province *tail=head;
 	printf("Province:");
 	char temp[50];
 	scanf("%s",temp);
 	while(tail->next!=NULL)
 	{
 		tail=tail->next;
-		if(!strcmp(tail->p_prov,temp))
+		if(!strcmp(tail->ProvProv,temp))
 		{
 			while(1)
 			{
@@ -23,9 +23,9 @@ void ch_prov(prov *head)
 				{
 					printf("New info:");
 					if(a==1)
-						scanf("%s",tail->p_man);
+						scanf("%s",tail->ProvLeader);
 					else if(a==2)
-						scanf("%s",tail->p_tel);
+						scanf("%s",tail->ProvTel);
 				}
 			}
 			break;
@@ -33,14 +33,14 @@ void ch_prov(prov *head)
 	}
 }
 //案件信息修改函数
-void ch_cases(prov *head)
+void ChangeCaseInfo(Province *head)
 {
-	prov *tail=head;
+	Province *tail=head;
 	printf("ID:");
 	
 }
 //媒体信息修改函数
-void ch_report(prov *head)
+void ChangeReportInfo(Province *head)
 {
 	
 }
