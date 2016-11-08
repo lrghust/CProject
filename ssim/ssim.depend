@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1473665864 source:c:\users\ruiguang li\desktop\c_project\ssim\main.c
+	<stdio.h>
+	<string.h>
+	<io.h>
+

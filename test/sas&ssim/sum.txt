@@ -1,0 +1,38 @@
+# 求和从1加到n
+        BYTE    n = 100 #初始化n
+
+        LOADI    A    1 #将计数器置为0
+        LOADB    B    n #将n的值存入寄存器
+        LOADI    C    0 #将和sum置为0
+# 寄存器D表示商 寄存器E表示余数 F表示商*10
+        LOADI    G    0 #下标置为0，即取整数n
+        LOADI    Z    0
+
+loop:   LT    B    A #比较计数器和n的大小 关系运算B<A
+        CJMP    set #如果条件为真跳出循环保存结果到堆栈
+        ADD    C    C     A #求和
+        ADDI    A    1 #计数器自增
+        JMP    loop #循环
+
+set:    LOADI    A    0 #重置计数器 用于计数结果的位数
+save:   EQU    C    Z #如果sum==0 结束循环
+        CJMP    set2 #循环结束 打印结果
+        ADDI    A    1 #计数器自增
+        LOADI    B    10 #用于下面乘法除法
+        DIV    D    C    B #做除法
+        MUL    F    D    B #商*10来求余数
+        SUB    E    C    F #求余数
+        ADD    C    D    Z #把商赋给sum
+        PUSH    E #余数入栈
+        JMP    save #循环
+
+set2:   LOADI    B    1 #用作新计数器来打印
+print:  LT    A    B #如果B>A 打印完毕
+        CJMP    end #结束
+        POP    E #将堆栈中的结果从高位到低位依次输出结果
+        ADDI    E    48 #转换为字符
+        ADDI    B    1 #计数器自增
+        OUT    E    15 #打印
+        JMP    print #循环
+
+end:    HLT #程序结束

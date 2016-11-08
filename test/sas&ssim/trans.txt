@@ -1,0 +1,53 @@
+#十六进制转换为十进制
+#寄存器A存储每次读入的字符的ASCII值
+		LOADI C 0 #寄存器C存储最终的十进制数
+		LOADI B 4 #按位左移位数
+		LOADI D 10 #用于判断换行符
+		LOADI Z 0
+
+in:		IN A 0 #读取一个字符
+		EQU A D #如果是换行符
+		CJMP set #转到处理十进制数入栈
+		LOADI E 57
+		LTE A E #如果字符是数字字符
+		CJMP a 
+		LOADI E 70
+		LTE A E #如果是大写字母
+		CJMP b
+		LOADI E 102
+		LTE A E #如果是小写字母
+		CJMP c
+
+a:		SUBI A 48 #转换为对应数字
+		JMP add
+b:		SUBI A 55
+		JMP add
+c:		SUBI A 87
+		JMP add
+
+add: 	SAL C C B #左移4位
+		OR C C A #按位或
+		JMP in
+
+set:    LOADI    A    0 #计数器 用于计数结果的位数
+save:   EQU    C    Z #如果=0 结束循环
+        CJMP    set2 #循环结束 打印结果
+        ADDI    A    1 #计数器自增
+        LOADI    B    10 #用于下面乘法除法
+        DIV    D    C    B #做除法
+        MUL    F    D    B #商*10来求余数
+        SUB    E    C    F #求余数
+        ADD    C    D    Z #把商赋给十进制数
+        PUSH    E #余数入栈
+        JMP    save #循环
+
+set2:   LOADI    B    1 #用作新计数器来打印
+print:  LT    A    B #如果B>A 打印完毕
+        CJMP    end #结束
+        POP    E #将堆栈中的结果从高位到低位依次输出结果
+        ADDI    E    48 #转换为字符
+        ADDI    B    1 #计数器自增
+        OUT    E #打印
+        JMP    print #循环
+
+end:    HLT #程序结束

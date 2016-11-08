@@ -1,0 +1,127 @@
+# depslib dependency file v1.0
+1473924907 source:c:\users\ruiguang li\desktop\system\backupinfo.c
+	"head.h"
+
+1474089147 c:\users\ruiguang li\desktop\system\head.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1473521888 source:c:\users\ruiguang li\desktop\system\changeinfo.c
+	"head.h"
+
+1474090410 source:c:\users\ruiguang li\desktop\system\countinfo.c
+	"head.h"
+
+1473495680 source:c:\users\ruiguang li\desktop\system\deleteinfo.c
+	"head.h"
+
+1474087965 source:c:\users\ruiguang li\desktop\system\initinfo.c
+	"head.h"
+
+1473509109 source:c:\users\ruiguang li\desktop\system\inputinfo.c
+	"head.h"
+
+1473474052 source:c:\users\ruiguang li\desktop\system\interface.c
+	"head.h"
+
+1473497293 source:c:\users\ruiguang li\desktop\system\main.c
+	"head.h"
+
+1473780458 source:c:\users\ruiguang li\desktop\system\panelcase.c
+	"head.h"
+
+1473219191 source:c:\users\ruiguang li\desktop\system\panelcount.c
+	"head.h"
+
+1473499099 source:c:\users\ruiguang li\desktop\system\panelfunction.c
+	"head.h"
+
+1474088707 source:c:\users\ruiguang li\desktop\system\panelprov.c
+	"head.h"
+
+1473780641 source:c:\users\ruiguang li\desktop\system\panelrepo.c
+	"head.h"
+
+1473509831 source:c:\users\ruiguang li\desktop\system\panelsearch.c
+	"head.h"
+
+1473509177 source:c:\users\ruiguang li\desktop\system\restoreinfo.c
+	"head.h"
+
+1473499188 source:c:\users\ruiguang li\desktop\system\saveinfo.c
+	"head.h"
+
+1473500182 source:c:\users\ruiguang li\desktop\system\searchinfo.c
+	"head.h"
+
+1473520873 source:c:\users\ruiguang li\desktop\system\testinfo.c
+	"head.h"
+
+1473507046 source:c:\users\ruiguang li\desktop\system\var.c
+	"head.h"
+
+1473924907 source:c:\users\ruiguang li\desktop\c_project\system\backupinfo.c
+	"head.h"
+
+1474599702 c:\users\ruiguang li\desktop\c_project\system\head.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1473521888 source:c:\users\ruiguang li\desktop\c_project\system\changeinfo.c
+	"head.h"
+
+1474090410 source:c:\users\ruiguang li\desktop\c_project\system\countinfo.c
+	"head.h"
+
+1473495680 source:c:\users\ruiguang li\desktop\c_project\system\deleteinfo.c
+	"head.h"
+
+1474087965 source:c:\users\ruiguang li\desktop\c_project\system\initinfo.c
+	"head.h"
+
+1473509109 source:c:\users\ruiguang li\desktop\c_project\system\inputinfo.c
+	"head.h"
+
+1473474052 source:c:\users\ruiguang li\desktop\c_project\system\interface.c
+	"head.h"
+
+1473497293 source:c:\users\ruiguang li\desktop\c_project\system\main.c
+	"head.h"
+
+1474374693 source:c:\users\ruiguang li\desktop\c_project\system\panelcase.c
+	"head.h"
+
+1473219191 source:c:\users\ruiguang li\desktop\c_project\system\panelcount.c
+	"head.h"
+
+1474372255 source:c:\users\ruiguang li\desktop\c_project\system\panelfunction.c
+	"head.h"
+
+1474088707 source:c:\users\ruiguang li\desktop\c_project\system\panelprov.c
+	"head.h"
+
+1474374693 source:c:\users\ruiguang li\desktop\c_project\system\panelrepo.c
+	"head.h"
+
+1473509831 source:c:\users\ruiguang li\desktop\c_project\system\panelsearch.c
+	"head.h"
+
+1474372186 source:c:\users\ruiguang li\desktop\c_project\system\restoreinfo.c
+	"head.h"
+
+1473499188 source:c:\users\ruiguang li\desktop\c_project\system\saveinfo.c
+	"head.h"
+
+1474255727 source:c:\users\ruiguang li\desktop\c_project\system\testinfo.c
+	"head.h"
+
+1473507046 source:c:\users\ruiguang li\desktop\c_project\system\var.c
+	"head.h"
+
+1474255569 source:c:\users\ruiguang li\desktop\c_project\system\searchinfo.c
+	"head.h"
+

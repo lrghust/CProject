@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="System" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/System" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/System" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="BackupInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ChangeInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CountInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DeleteInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="InitInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="InputInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PanelCase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PanelFunction.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PanelProv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PanelRepo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PanelSearch.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="RestoreInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SaveInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SearchInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TestInfo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="head.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="var.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

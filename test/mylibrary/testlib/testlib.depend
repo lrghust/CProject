@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1474093514 source:c:\users\ruiguang li\desktop\test\mylibrary\testlib\main.c
+	"mylibrary.h"
+
+1473665072 c:\users\ruiguang li\desktop\test\mylibrary\testlib\mylibrary.h
+
+1474093747 source:c:\users\ruiguang li\desktop\c_project\test\mylibrary\testlib\main.c
+	"mylibrary.h"
+
+1473665072 c:\users\ruiguang li\desktop\c_project\test\mylibrary\testlib\mylibrary.h
+
